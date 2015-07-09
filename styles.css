@@ -35,6 +35,9 @@ body, a:link, a:visited, a:active{
   height: 60px;
   width: 60px;
 }
+.gifDance img {
+  display:hidden;
+}
 
 .gifDance img.resize{
   width:40px;
