@@ -5,7 +5,9 @@ body{
   margin: 0px;
   background-color:#444;
   font-size: 18px;
-  background: url(background/background.jpg);
+  background: url(background/niceBowl.jpg);
+  background-size: 80%;
+  background-repeat:no-repeat;
 }
 body, a:link, a:visited, a:active{
   color: lightblue;
@@ -30,7 +32,17 @@ body, a:link, a:visited, a:active{
   display: inline;
   position:absolute;
   /*background: url(gifs/burgerdance/burger0.gif);*/
-  background-size:contain;
-  height: 100px;
-  width: 100px;
+  height: 60px;
+  width: 60px;
+}
+
+.gifDance img.resize{
+  width:40px;
+  height:auto;
+}
+
+.pretty-lights img{
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
 }

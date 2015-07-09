@@ -1,7 +1,7 @@
 var GifDancer = function(top, left, timeBetweenSteps) {
   var $danceDiv = $('<div class="gifDancer">' +
-                    '<img class="first" src="gifs/burgerdance/burger0.gif">' +
-                    '<img class="second" src="gifs/burgerdance/burger1.gif"></div>');
+                    '<img class="first" src="gifs/burgerdance/burger0.gif" height="200" width="200">' +
+                    '<img class="second" src="gifs/burgerdance/burger1.gif" height="200" width="200"></div>');
   Dancer.call(this, top, left, timeBetweenSteps, $danceDiv);
   this.state = 0;
 };
