@@ -6,7 +6,7 @@ body{
   background-color:#444;
   font-size: 18px;
   background: url(background/niceBowl.jpg);
-  background-size: 80%;
+  background-size: 100%;
   background-repeat:no-repeat;
 }
 body, a:link, a:visited, a:active{
@@ -34,9 +34,6 @@ body, a:link, a:visited, a:active{
   /*background: url(gifs/burgerdance/burger0.gif);*/
   height: 60px;
   width: 60px;
-}
-.gifDance img {
-  display:hidden;
 }
 
 .gifDance img.resize{

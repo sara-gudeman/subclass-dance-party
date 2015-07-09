@@ -5,7 +5,7 @@ $(document).ready(function(){
     var spins = 0
     var spin = function(context){
       if(spins < 50){
-        rotation += 10;
+        rotation += 7.2;
         $(context).rotate(rotation);
         spins++;
         setTimeout(function(){spin(context);}, 50);

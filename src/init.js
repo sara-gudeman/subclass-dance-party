@@ -27,8 +27,26 @@ $(document).ready(function(){
       $("body").width() * Math.random(),
       Math.random() * 1000
     );
-    console.log("Appending " + dancer.$node)
+    //console.log("Appending " + dancer.$node)
     $('body').append(dancer.$node);
+
+    var calcDistance = function(dancer1, dancer2) {
+      var distLeft = Math.pow(dancer1.left - dancer2.left, 2);
+      var distTop = Math.pow(dancer1.top - dancer2.top, 2);
+      var distance = Math.sqrt(distLeft + distTop);
+      return distance;
+    };
+
+    for(var i = 0; i < dancers.length; i++) {
+
+    }
+    dancers.push(dancer);
+  });
+  
+  $(".lineUpButton").on("click", function(event) {
+    for (var i = 0; i < dancers.length; i++) {
+      dancers[i].lineUp();
+    }
   });
 });
 
