@@ -20,27 +20,29 @@ $(document).ready(function(){
     // get the maker function for the kind of dancer we're supposed to make
     var dancerMakerFunction = window[dancerMakerFunctionName];
 
+    var topVal = 0;
+    var leftVal = 0;
+    var stepInterval = Math.random() * 1000;
     // make a dancer with a random position
+    if (dancers.length === 0) {
+      topVal = $("body").height() /2;
+      leftVal = $("body").width() /2;
+    } else {
+      topVal = dancers[0].top;
+      leftVal = dancers[0].left;
+    }
 
-    var dancer = new dancerMakerFunction(
-      $("body").height() * Math.random(),
-      $("body").width() * Math.random(),
-      Math.random() * 1000
-    );
+    var dancer = new dancerMakerFunction(topVal, leftVal, stepInterval);
     //console.log("Appending " + dancer.$node)
     $('body').append(dancer.$node);
-
-    var calcDistance = function(dancer1, dancer2) {
-      var distLeft = Math.pow(dancer1.left - dancer2.left, 2);
-      var distTop = Math.pow(dancer1.top - dancer2.top, 2);
-      var distance = Math.sqrt(distLeft + distTop);
-      return distance;
-    };
-
-    for(var i = 0; i < dancers.length; i++) {
-
-    }
     dancers.push(dancer);
+
+    topVal = $("body").height() * Math.random();
+    leftVal = $("body").width() * Math.random();
+
+    dancer.$node.animate( { top: topVal, left: leftVal }, 2000);
+    dancer.left = leftVal;
+    dancer.top = topVal;
   });
   
   $(".lineUpButton").on("click", function(event) {

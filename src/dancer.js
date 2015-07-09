@@ -1,6 +1,6 @@
 var Dancer = function(top, left, timeBetweenSteps, node){
   if (node === undefined) {
-    node = $('<span class="dancer"></span>');
+    node = $('<span class="dancer">PARTY TIME!</span>');
   }
   this.$node = node;
   this.top = top;
@@ -39,6 +39,9 @@ Dancer.prototype.lineUp = function() {
   this.top = this.previousTopPosition;
   this.linedUp = false;
  }
+
+ this.$node.animate({top: this.top, left:this.left}, 2000);
+
  var styleSettings = {
   top: this.top,
   left: this.left
